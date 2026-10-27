@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Booking System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">✈ TravelEase</div>
+    <span>Travel Booking System</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">YOUR JOURNEY STARTS HERE</p>
+      <h1>Book your next journey</h1>
+      <p>Select your preferred travel type and enter your journey details.</p>
+    </section>
+
+    <section class="booking-card">
+      <h2>Choose your travel type</h2>
+      <div class="travel-options">
+        <button class="travel-option selected" type="button" data-type="flight">
+          <span class="option-icon">✈️</span><span>Flight</span>
+        </button>
+        <button class="travel-option" type="button" data-type="train">
+          <span class="option-icon">🚆</span><span>Train</span>
+        </button>
+        <button class="travel-option" type="button" data-type="bus">
+          <span class="option-icon">🚌</span><span>Bus</span>
+        </button>
+      </div>
+
+      <form id="bookingForm">
+        <div class="form-grid">
+          <label>
+            From
+            <input id="from" type="text" placeholder="Departure city" required>
+          </label>
+          <label>
+            To
+            <input id="to" type="text" placeholder="Destination city" required>
+          </label>
+          <label>
+            Journey date
+            <input id="date" type="date" required>
+          </label>
+          <label>
+            Passengers
+            <select id="passengers">
+              <option value="1">1 passenger</option>
+              <option value="2">2 passengers</option>
+              <option value="3">3 passengers</option>
+              <option value="4">4 passengers</option>
+              <option value="5">5 passengers</option>
+            </select>
+          </label>
+        </div>
+
+        <div id="extraFields" class="extra-fields"></div>
+
+        <button class="book-button" type="submit">Create Booking</button>
+      </form>
+
+      <div id="confirmation" class="confirmation" aria-live="polite" hidden></div>
+    </section>
+    <p class="note">Demo project only: this frontend creates a sample booking confirmation. It does not reserve real tickets or process payments.</p>
+  </main>
+
+  <footer>TravelEase · SESD Design Pattern Project · Factory Method</footer>
+  <script src="script.js"></script>
+</body>
+</html>
